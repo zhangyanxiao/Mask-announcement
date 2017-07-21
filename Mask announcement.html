@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+		function CloseBtn() {
+            $("#xuanfudiv").hide();
+            $("#zhezhao").hide();
+     }       
+    </script>
+	</head>
+	<body>
+		<form>
+        <div id="zhezhao" style="padding:0;margin:0;position: absolute; width:100%;height:100%; background-color:gray;z-index: 100;opacity:0.5;filter:alpha(opacity=50)"></div>
+        <div id="xuanfudiv" style=" position: absolute;background-color:white;border-radius:5px; z-index: 100;margin-left:30%; margin-right:30%; margin-top:100px; height:auto ;font-size:20px; color:black;text-align: center;">
+            
+            <div id="contentdiv" style="text-align: center;margin-top:20px;">
+                <!--公告-->
+                <div id="ggdiv" style="font-size:20px;font-weight:bold">公告</div>
+                <!--内容-->
+                <div id="innerdiv" style="text-align: left;text-indent:30px;line-height:35px; padding:0 20px; font-size:14px;">
+                    按照省政府关于推进政府网站集约化建设的通知精神，关停，原有业务咨询、表格下载等相关功能将迁至baidu网站
+                    （<a href="https://www.baidu.com"style="color:blue">https://www.baidu.com</a>）。
+                    给您带来的不便，敬请谅解。
+                </div>
+            </div>
+            <div id="closediv" style="margin:0;padding: 0; padding-bottom:20px">
+                <!--关闭按钮-->
+                <input id="closebutton" type="button" style=" width:100px; height:30px;background-color:blue; color:white ; font-size:15px; border-radius:5px; cursor:pointer; font-weight:bold;border:none" value="关 闭" onclick="CloseBtn()" />
+            </div>
+        </div>
+    
+        <div class="main_body_bottom">
+        	概述/背景
+
+项目在开发过程中的版本，和在发布时的版本应该有所区别。发布的版本应该保证一个版本号对应唯一的内容。
+
+之前遇到过一个项目，因为pom中的版本号没有-SNAPSHOT，导致两个环境依赖的项目虽然版本号相同，其实不是同一个。当时得出结论：相同的版本号只应该对应一个内容。
+
+后来系统学习了下Maven，才具体了解到Maven体系中关于项目版本的标准，这里分享出来，希望大家在维护项目版本的时候有据可依。
+
+另外，Maven中的版本管理需要结合软件版本控制工具使用，如Git、SVN等。虽然目前Git的使用已经很普遍了，我的工作环境使用的是SVN，就以SVN为例进行介绍。
+
+Maven范围的版本和SVN范围的版本有不同的含义。前者面向的是项目，代码多次修改，项目的版本号可以不变；
+        </div>
+        </form>
+	</body>
+</html>
